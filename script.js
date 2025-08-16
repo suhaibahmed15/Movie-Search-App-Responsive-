@@ -158,7 +158,8 @@
                 pager.style.display = totalPages > 1 ? 'flex' : 'none';
                 qs('#prevBtn').disabled = state.page <= 1;
                 qs('#nextBtn').disabled = state.page >= totalPages;
-            } catch (err) {
+            } 
+            catch (err) {
                 empty(); showError('Network error. Check your API key and connection.');
             }
         }
