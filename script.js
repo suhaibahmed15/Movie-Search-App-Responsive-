@@ -1,4 +1,4 @@
-        // === Settings ===
+       //  Suhaib Ahmed Abbasi
 
         const OMDB_KEY = "30c212c1"; // required for live data
         const API = (q, page = 1, y = "") => `https://www.omdbapi.com/?apikey=${OMDB_KEY}&s=${encodeURIComponent(q)}${y ? `&y=${y}` : ""}&page=${page}`;
@@ -15,11 +15,11 @@
         const errorBox = qs('#error');
         const modal = qs('#movieModal');
 
-        // Theme toggle (bonus: stores preference)
+        // Theme toggle 
         const themeToggle = qs('#themeToggle');
-        themeToggle.addEventListener('click', ()=>{
-  document.body.classList.toggle('light');
-});
+          themeToggle.addEventListener('click', ()=>{
+          document.body.classList.toggle('light');
+        });
 
         // Debounce helper
         const debounce = (fn, ms = 450) => {
@@ -160,7 +160,7 @@
                 qs('#nextBtn').disabled = state.page >= totalPages;
             } 
             catch (err) {
-                empty(); showError('Network error. Check your API key and connection.');
+                empty(); showError('Network error');
             }
         }
 
